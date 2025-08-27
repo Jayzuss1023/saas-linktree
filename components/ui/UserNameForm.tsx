@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useFormState } from "react-dom";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
@@ -15,7 +14,6 @@ import {
   User,
   AlertCircle,
   ExternalLink,
-  Navigation2Icon,
   Copy,
 } from "lucide-react";
 

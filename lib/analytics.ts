@@ -1,4 +1,3 @@
-import { userAgent } from "next/server";
 import { ClientTrackingData } from "./types";
 
 export async function trackLinkClick(event: ClientTrackingData) {

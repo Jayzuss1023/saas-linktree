@@ -65,7 +65,7 @@ export async function fetchAnalytics(
       totalClicks: analytics.total_clicks || 0,
       uniqueVisitors: analytics.unique_users || 0,
       countriesReached: analytics.countries_reached || 0,
-      totalLinksClicked: analytics.total_links_reached || 0,
+      totalLinksClicked: analytics.total_links_clicked || 0,
       topLinkTitle: analytics.top_link_title?.[0] || null,
       topReferrer: analytics.top_referrer?.[0] || null,
       firstClick: analytics.first_click || null,

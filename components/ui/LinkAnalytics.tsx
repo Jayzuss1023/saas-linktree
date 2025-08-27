@@ -19,7 +19,6 @@ interface LinkAnalyticsProps {
 }
 
 async function LinkAnalytics({ analytics }: LinkAnalyticsProps) {
-  console.log(analytics);
   const { has } = await auth();
   const hasAnalyticsAccess = has({ feature: "analytics" });
 
