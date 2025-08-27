@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import Header from "@/components/ui/Header";
+import { auth } from "@clerk/nextjs/server";
 import {
   ArrowRight,
   BarChart3,
+  CheckCircle,
   Palette,
   Shield,
   Smartphone,
@@ -9,6 +12,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 
 const features = [
@@ -74,9 +78,17 @@ const testimonials = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const { userId } = await auth();
+
+  if (userId) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Header Section */}
+      <Header />
       {/* Hero Secton */}
       <section className="px-4 py-20 lg:px-8 lg:py-32">
         <div className="max-w-7xl mx-auto">
@@ -208,6 +220,93 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
+      <section className="px-4 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl p-12 lg:p-16 text-center text-white shadow-2xl">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of creators who trust Linkify to showcase their
+              content. Create your beautiful link page in minutes, not hours.
+            </p>
+
+            <div>
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6 h-auto font-semibold"
+              >
+                <Link href="/dashboard" className="flex items-center gap-2">
+                  Create Your Linkify
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-80">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                Free to start
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                No credit card required
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                Set up in 15 seconds
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-white/80 backdrop-blur-sm border-t border-white/20 px-4 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <div className="text-2xl font-bold text-gray-900">Linkify</div>
+              <p className="text-gray-600">
+                The easiest way to share all your beautiful links all in one
+                page
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
+              <div className="space-y-2 text-gray-600">
+                <div>Features</div>
+                <div>Pricing</div>
+                <div>Analaytics</div>
+                <div>Integration</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
+              <div className="space-y-2 text-gray-600">
+                <div>About</div>
+                <div>Blog</div>
+                <div>Careers</div>
+                <div>Contact</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4">Support</h4>
+              <div className="space-y-2 text-gray-600">
+                <div>About</div>
+                <div>Blog</div>
+                <div>Careers</div>
+                <div>Contact</div>
+              </div>
+            </div>
+          </div>
+          \
+        </div>
+      </footer>
     </div>
   );
 }

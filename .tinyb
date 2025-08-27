@@ -1,0 +1,14 @@
+{
+    "host": "https://api.us-east.aws.tinybird.co",
+    "id": "d02dd1c9-2a0e-4cb9-b51f-aa5e028958ed",
+    "name": "linkify_clone",
+    "scope": "user",
+    "token": "p.eyJ1IjogImQwMmRkMWM5LTJhMGUtNGNiOS1iNTFmLWFhNWUwMjg5NThlZCIsICJpZCI6ICJkZmIyZDI4YS04OGUxLTQ0MWUtYTJkZC01YWM5ZWFlMzdmZGUiLCAiaG9zdCI6ICJ1cy1lYXN0LWF3cyJ9.-xnKNy5IjyDbfsZ42AeBFJk2hg56qyjd2YL4X8HtzSw",
+    "tokens": {
+        "https://api.us-east.aws.tinybird.co": "p.eyJ1IjogImQwMmRkMWM5LTJhMGUtNGNiOS1iNTFmLWFhNWUwMjg5NThlZCIsICJpZCI6ICJkZmIyZDI4YS04OGUxLTQ0MWUtYTJkZC01YWM5ZWFlMzdmZGUiLCAiaG9zdCI6ICJ1cy1lYXN0LWF3cyJ9.-xnKNy5IjyDbfsZ42AeBFJk2hg56qyjd2YL4X8HtzSw"
+    },
+    "user_email": "jesus.flo369@gmail.com",
+    "user_id": "dc82611f-63d1-458a-a46d-a70ce370c854",
+    "user_token": "p.eyJ1IjogImRjODI2MTFmLTYzZDEtNDU4YS1hNDZkLWE3MGNlMzcwYzg1NCIsICJpZCI6ICJjZTEyYjg2YS02ZWE2LTQ4ZjEtYmEyYi1hODNiNzQzMjI0MWEiLCAiaG9zdCI6ICJ1cy1lYXN0LWF3cyJ9._H_S22aWlz4yd-aezl65TYNmfFBx4NuTtu-H0VHDYJU",
+    "version": "0.0.1.dev280"
+}
